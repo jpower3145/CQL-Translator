@@ -5,7 +5,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
 public class LancsBoxTranslator {
-
+    /**
+     * Teaches LLM the rules so we can ask new questions
+     */
     private final OllamaChatModel model;
     private final Gson gson;
 
@@ -96,6 +98,7 @@ public class LancsBoxTranslator {
         int firstBrace = clean.indexOf("{");
         int lastBrace = clean.lastIndexOf("}");
         
+        // Extract only JSON substring
         if (firstBrace != -1 && lastBrace != -1 && lastBrace > firstBrace) {
             clean = clean.substring(firstBrace, lastBrace + 1);
         }

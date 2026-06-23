@@ -17,7 +17,7 @@ public class CqlValidator {
             return false;
         }
 
-        // Rule 2: It should contain a valid attribute key definition (e.g., pos, word, lemma)
+        // Rule 2: It should contain a valid attribute key definition (e.g., pos, word, sem, hw)
         if (!trimmed.contains("pos=") && !trimmed.contains("word=") && !trimmed.contains("sem=") && !trimmed.contains("hw=")) {
             return false;
         }

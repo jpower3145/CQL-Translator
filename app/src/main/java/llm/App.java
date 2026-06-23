@@ -8,12 +8,15 @@ import java.awt.event.ActionListener;
 
 public class App {
 
+    /**
+     * Handles Swing GUI and input -> output displaying
+     */
+
     private JFrame frame;
     private JTextField inputField;
     private JButton translateButton;
     private JTextField cqlOutputField;
     private JTextArea explanationArea;
-    private JLabel statusLabel;
     private JLabel validationLabel;
     private LancsBoxTranslator translator;
 
